@@ -30,7 +30,7 @@ This data source can be overriden by specifying a configuration URL via the kern
 The single most useful piece of information needed when troubleshooting is the log from Ignition. Ignition runs in multiple stages so it's easiest to filter by the syslog identifier: `ignition`. When using systemd, this can be accomplished with the following command:
 
 ```
-journalctl --identifier=ignition --all
+sudo journalctl --identifier=ignition --all
 ```
 
 In the event that this doesn't yield any results, running as root may help. There are circumstances where the journal isn't owned by the systemd-journal group or the current user is not a part of that group.
